@@ -1,3 +1,12 @@
+def conversor(tipo_moneda, valor_dolar):
+    mon = input("¿Cuanto " + tipo_moneda + " quieres cambiar?: ")
+    mon = float(mon)
+    dolares = mon/valor_dolar
+    dolares = round(dolares, 2)
+    dolares = str(dolares)
+    print("Tienes $" + dolares + "dólares")
+
+
 menu=""" 
 	Bienvenido al conversor de monedas
 
@@ -12,37 +21,13 @@ menu="""
 opcion=input(menu)
 
 if opcion=='1':
-	cop = input("¿Cuantos pesos colombianos quieres cambiar?: ")
-	cop = float(cop)
-	cop_dolar = 3722
-	dolares=cop/cop_dolar
-	dolares=round(dolares, 2)
-	dolares=str(dolares)
-	print("Tienes $" + dolares + "dólares")
+	conversor("Colombianos", 3722)
 elif opcion=='2':
-	ars = input("¿Cuantos pesos Argentinos quieres cambiar?: ")
-	ars = float(ars)
-	ars_dolar = 99
-	dolares=ars/ars_dolar
-	dolares=round(dolares, 2)
-	dolares=str(dolares)
-	print("Tienes $" + dolares + "dólares")
+	conversor("Argentinos", 99)
 elif opcion=='3':
-	mxn = input("¿Cuantos pesos Mexicanos quieres cambiar?: ")
-	mxn = float(mxn)
-	mxn_dolar = 20
-	dolares=mxn/mxn_dolar
-	dolares=round(dolares, 2)
-	dolares=str(dolares)
-	print("Tienes $" + dolares + "dólares")
+	conversor("Mexicanos", 20)
 elif opcion=='4':
-	bs = input("¿Cuantos bolivares quieres cambiar?: ")
-	bs = float(bs)
-	bs_dolar = 4
-	dolares=bs/bs_dolar
-	dolares=round(dolares, 2)
-	dolares=str(dolares)
-	print("Tienes $" + dolares + "dólares")
+	conversor("Venezolanos", 4.12)
 elif opcion=='0':
 	menu2="""
 
@@ -54,37 +39,13 @@ elif opcion=='0':
 	"""
 	option=input(menu2)
 	if opcion=='5':
-		cop = input("¿Cuantos dólares cambiar a pesos colombianos?: ")
-		cop = float(cop)
-		cop_dolar = 3722
-		dolares=cop_dolar/cop
-		dolares=round(dolares, 2)
-		dolares=str(dolares)
-		print("Tienes $" + dolares + "dólares")
+		conversor("Colombianos", 3722)
 	elif opcion=='6':
-		ars = input("¿Cuantos dólares cambiar a pesos Argentinos?: ")
-		ars = float(ars)
-		ars_dolar = 99
-		dolares=ars/ars_dolar
-		dolares=round(dolares, 2)
-		dolares=str(dolares)
-		print("Tienes $" + dolares + "dólares")
+		conversor("Argentinos", 99)
 	elif opcion=='7':
-		mxn = input("¿Cuantos dólares cambiar a pesos Mexicanos ?: ")
-		mxn = float(mxn)
-		mxn_dolar = 20
-		dolares=mxn/mxn_dolar
-		dolares=round(dolares, 2)
-		dolares=str(dolares)
-		print("Tienes $" + dolares + "dólares")
+		conversor("Mexicanos", 20)
 	elif opcion=='8':
-		bs = input("¿Cuantos dólares cambiar a bolivares?: ")
-		bs = float(bs)
-		bs_dolar = 4
-		dolares=bs_dolar/bs
-		dolares=round(dolares, 2)
-		dolares=str(dolares)
-		print("Tienes $" + dolares + "dólares")
+		conversor("Venezolanos", 4.12)
 	else:
 		print('Ingresa una opción correcta por favor')
 
